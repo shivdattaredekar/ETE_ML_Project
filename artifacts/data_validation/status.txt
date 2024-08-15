@@ -1,2 +1,2 @@
 Validation status: True
-Type status: False
+Type status: True
