@@ -1,1 +1,86 @@
 [2024-08-15 06:21:34,064: INFO: main: Welcome to Mlproject]
+[2024-08-15 07:18:54,868: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-15 07:18:54,875: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-15 07:18:54,876: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-08-15 07:18:54,880: INFO: common: created directory at: artifacts]
+[2024-08-15 07:18:54,882: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-15 07:18:55,654: INFO: 2145384082: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 94C9:08EE:4DBF91:64C9B2:66BD5E86
+Accept-Ranges: bytes
+Date: Thu, 15 Aug 2024 01:48:55 GMT
+Via: 1.1 varnish
+X-Served-By: cache-bom4727-BOM
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1723686535.405923,VS0,VE277
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 18b44fd9168684126350a3d15fb93298b45e59f9
+Expires: Thu, 15 Aug 2024 01:53:55 GMT
+Source-Age: 0
+
+]
+[2024-08-15 07:19:37,054: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-15 07:19:37,056: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-15 07:19:37,060: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-08-15 07:19:37,062: INFO: common: created directory at: artifacts]
+[2024-08-15 07:19:37,064: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-15 07:19:37,065: INFO: 2145384082: File already exists of size: ~ 23 KB]
+[2024-08-15 07:20:03,448: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-15 07:20:03,450: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-15 07:20:03,452: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-08-15 07:20:03,453: INFO: common: created directory at: artifacts]
+[2024-08-15 07:20:03,456: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-15 07:21:55,921: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-15 07:21:55,928: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-15 07:21:55,931: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-08-15 07:21:55,937: INFO: common: created directory at: artifacts]
+[2024-08-15 07:21:55,943: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-15 07:21:57,623: INFO: 2145384082: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 1025318
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "1092c620e522f2a97545206eab13f39f6ff252fd9a9ca31bfe62215a5561c34a"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 7BBE:1DC39A:3E53FE:50044F:66BD5F3B
+Accept-Ranges: bytes
+Date: Thu, 15 Aug 2024 01:51:57 GMT
+Via: 1.1 varnish
+X-Served-By: cache-bom4740-BOM
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1723686717.783001,VS0,VE383
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 9b83dbdc383c0fa0860f6b894f1195672818052a
+Expires: Thu, 15 Aug 2024 01:56:57 GMT
+Source-Age: 0
+
+]
+[2024-08-15 07:39:44,615: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2024-08-15 07:39:44,618: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-15 07:39:44,619: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-15 07:39:44,621: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-08-15 07:39:44,622: INFO: common: created directory at: artifacts]
+[2024-08-15 07:39:44,635: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-15 07:39:44,637: INFO: data_ingestion: File already exists of size: ~ 1001 KB]
+[2024-08-15 07:39:44,684: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
