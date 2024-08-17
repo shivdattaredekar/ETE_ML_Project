@@ -23,7 +23,7 @@ class DataValidation:
                     break  
 
             with open(self.config.STATUS_FILE, 'w') as f:
-                f.write(f"Validation status: {validation_status}\n")
+                f.write(f"Validation_status: {validation_status}\n")
 
             return validation_status
         
@@ -49,8 +49,26 @@ class DataValidation:
                     type_status = True
                     
             with open(self.config.STATUS_FILE, 'a') as f:
-                f.write(f"Type status: {type_status}\n")
+                f.write(f"Type_status: {type_status}\n")
             return type_status
         except Exception as e:
             raise e
+        
+    def validate_missing_values(self)-> bool:
+        try:
+            missing_status = False
+            data = pd.read_csv(self.config.unzip_data_dir)
+
+            for col in data.columns.to_list():
+                count = data[col].isnull().sum() 
+                if count > 0:
+                    missing_status = True
+                    logger.error(f'Column {col} has {count} missing values')
+                    break
+            with open(self.config.STATUS_FILE,'a') as f:
+                f.write(f'Missing_Value_Status: {missing_status}\n')
+                
+
+        except Exception as e:
+            raise e 
         

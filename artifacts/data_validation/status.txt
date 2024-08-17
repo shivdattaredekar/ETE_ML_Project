@@ -1,3 +1,3 @@
-Validation status: True
-Type status: True
-Missing Value Status: False
+Validation_status: True
+Type_status: True
+Missing_Value_Status: False
