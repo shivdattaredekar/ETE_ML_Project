@@ -663,3 +663,7 @@ x==========x]
 [2024-08-17 09:40:41,452: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
 
 x==========x]
+[2024-08-20 14:00:56,192: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-20 14:00:56,199: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-20 14:00:56,208: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-08-20 14:00:56,210: INFO: common: created directory at: artifacts]
