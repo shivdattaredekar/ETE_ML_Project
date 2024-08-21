@@ -3,6 +3,7 @@ from Mlproject.pipeline.stage_data_ingestion import DataIngestionTrainingPipelin
 from Mlproject.pipeline.stage_data_validation import DataValidationTrainingPipeline
 from Mlproject.pipeline.stage_data_transformation import DataTransformationPipeline
 from Mlproject.pipeline.stage_model_trainer import ModelTrainingPipeline
+from Mlproject.pipeline.stage_model_evaluation import ModelEvaluationPipeline
 
 
 STAGE_NAME = 'Data Ingestion Stage'
@@ -44,6 +45,15 @@ STAGE_NAME = "Model Training stage"
 try:
    logger.info(f">>>>>>>>>>>Starting {STAGE_NAME}<<<<<<<<<<")
    ModelTrainingPipeline().main()
+   logger.info(f">>>>>>>>>>>{STAGE_NAME} completed successfully<<<<<<<<<")
+except Exception as e:
+   logger.exception(f"An error occurred in {STAGE_NAME}: {str(e)}")
+   raise e
+
+STAGE_NAME = "Model Evaluation stage"
+try:
+   logger.info(f">>>>>>>>>>>Starting {STAGE_NAME}<<<<<<<<<<")
+   ModelEvaluationPipeline().main()
    logger.info(f">>>>>>>>>>>{STAGE_NAME} completed successfully<<<<<<<<<")
 except Exception as e:
    logger.exception(f"An error occurred in {STAGE_NAME}: {str(e)}")
