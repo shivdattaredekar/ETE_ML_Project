@@ -20,10 +20,7 @@ class DataValidationConfig:
 class DataTransformationConfig:
     root_dir: Path
     data_path: Path
-    scaler_name : str
 
-from dataclasses import dataclass
-from pathlib import Path
 
 @dataclass(frozen=True)
 class ModelTrainerConfig:

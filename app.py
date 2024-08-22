@@ -3,7 +3,6 @@ import numpy as np
 import pandas as pd
 from Mlproject.pipeline.prediction import PredictionPipeline
 import streamlit as st
-from sklearn.preprocessing import StandardScaler
 import joblib
 
 st.title('Welcome to Default Prediction')
@@ -46,7 +45,7 @@ if st.sidebar.button('Predict'):
         data = np.array(data).reshape(1, 23)
         
         # Assuming the scaler is pre-fitted, load it here
-        scaler = joblib.load('artifacts\\data_transformation\\scaler.joblib')
+        scaler = joblib.load('artifacts\\model_training\\scaler.joblib')
         data = scaler.transform(data)
         
         prediction_pipeline = PredictionPipeline()
@@ -56,8 +55,4 @@ if st.sidebar.button('Predict'):
     except Exception as e:
         st.write(f'An error occurred: {e}')
         
-        st.write(data)
-
-        for i, val in enumerate(data):
-            st.write(f"Value: {val}, Type: {type(val)}")
-
+        

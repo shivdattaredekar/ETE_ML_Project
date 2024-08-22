@@ -40,7 +40,6 @@ except Exception as e:
         logger.exception(e)
         raise e
 
-
 STAGE_NAME = "Model Training stage"
 try:
    logger.info(f">>>>>>>>>>>Starting {STAGE_NAME}<<<<<<<<<<")
@@ -58,3 +57,4 @@ try:
 except Exception as e:
    logger.exception(f"An error occurred in {STAGE_NAME}: {str(e)}")
    raise e
+
