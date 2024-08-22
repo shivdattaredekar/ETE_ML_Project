@@ -31,6 +31,7 @@ class DataTransformationPipeline:
                 data_transformation_config = config.get_data_transformation_config()
                 data_transformation = DataTransformation(data_transformation_config)
                 data_transformation.TrainTestSplit()
+                data_transformation.scaling()
             else :
                 raise Exception("Data will not transform as validation failed check running logs for more info")
 
