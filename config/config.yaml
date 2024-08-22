@@ -15,16 +15,19 @@ data_validation:
 data_transformation:
   root_dir: artifacts/data_transformation
   data_path: artifacts/data_ingestion/UCI_Credit_Card.csv
+  
 
 model_trainer:
   root_dir: artifacts/model_training
   train_data_path: artifacts/data_transformation/train.csv
   test_data_path: artifacts/data_transformation/test.csv
   model_name : model.joblib
+  scaler_name : scaler.joblib
 
 model_evaluation:
   root_dir: artifacts/model_evaluation
   model_path: artifacts/model_training/model.joblib
+  scaler_path: artifacts/model_training/scaler.joblib
   test_data_path: artifacts/data_transformation/test.csv
   metric_file_name: artifacts/model_evaluation/metrics.json
   

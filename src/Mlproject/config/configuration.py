@@ -55,7 +55,8 @@ class ConfigurationManager:
         
         data_transformation_config = DataTransformationConfig(
             root_dir=config.root_dir,
-            data_path=config.data_path,
+            data_path=config.data_path
+            
         )
 
         return data_transformation_config
@@ -75,7 +76,8 @@ class ConfigurationManager:
             model_name = config.model_name,
             alpha = params.alpha,
             l1_ratio = params.l1_ratio,
-            target_column = schema.name
+            target_column = schema.name,
+            scaler_name = config.scaler_name
             
         )
         return model_trainer_config
@@ -91,6 +93,7 @@ class ConfigurationManager:
             root_dir=config.root_dir,
             test_data_path = config.test_data_path,
             model_path = config.model_path,
+            scaler_path = config.scaler_path,
             all_params=params,
             metric_file_name = config.metric_file_name,
             target_column = schema.name

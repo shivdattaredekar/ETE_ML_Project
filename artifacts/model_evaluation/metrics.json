@@ -1,8 +1,8 @@
 {
-    "accuracy score": 0.7754666666666666,
-    "Precision score": 0.0,
-    "Recall score": 0.0,
-    "F1 score": 0.0,
-    "ROC score": 0.5,
-    "Log loss": 8.09300164096977
+    "accuracy score": 0.8137333333333333,
+    "Precision score": 0.702276707530648,
+    "Recall score": 0.2463144963144963,
+    "F1 score": 0.3647112323783538,
+    "ROC score": 0.608681771318011,
+    "Log loss": 6.713731171279555
 }
