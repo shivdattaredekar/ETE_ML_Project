@@ -86,9 +86,9 @@ jobs:
         run: |
          docker pull ${{secrets.AWS_ECR_LOGIN_URI}}/${{ secrets.ECR_REPOSITORY_NAME }}:latest
          
-      - name: Stop and remove container if running
-        run: |
-         docker ps -q --filter "name=Mlproject" | grep -q . && docker stop Mlproject && docker rm -fv Mlproject
+      #- name: Stop and remove container if running
+      #  run: |
+      #   docker ps -q --filter "name=Mlproject" | grep -q . && docker stop Mlproject && docker rm -fv Mlproject
        
       - name: Run Docker Image to serve users
         run: |
