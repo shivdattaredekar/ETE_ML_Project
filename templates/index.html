@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Defaulter Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            max-height: 80vh;
+            overflow-y: auto; /* Enables scrolling if needed */
+            box-sizing: border-box;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+            color: #333;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Bank Defaulter Prediction</h1>
+    <form action="/" method="POST">
+        <label for="LIMIT_BAL">LIMIT_BAL:</label>
+        <input type="number" id="LIMIT_BAL" name="LIMIT_BAL" step="0.01" min="0" required>
+
+        <label for="SEX">SEX:</label>
+        <input type="number" id="SEX" name="SEX" min="1" max="2" required>
+
+        <label for="EDUCATION">EDUCATION:</label>
+        <input type="number" id="EDUCATION" name="EDUCATION" min="0" max="6" required>
+
+        <label for="MARRIAGE">MARRIAGE:</label>
+        <input type="number" id="MARRIAGE" name="MARRIAGE" min="0" max="3" required>
+
+        <label for="AGE">AGE:</label>
+        <input type="number" id="AGE" name="AGE" min="18" max="100" required>
+
+        <label for="PAY_0">PAY_0:</label>
+        <input type="number" id="PAY_0" name="PAY_0" min="-2" max="8" required>
+
+        <label for="PAY_2">PAY_2:</label>
+        <input type="number" id="PAY_2" name="PAY_2" min="-2" max="8" required>
+
+        <label for="PAY_3">PAY_3:</label>
+        <input type="number" id="PAY_3" name="PAY_3" min="-2" max="8" required>
+
+        <label for="PAY_4">PAY_4:</label>
+        <input type="number" id="PAY_4" name="PAY_4" min="-2" max="8" required>
+
+        <label for="PAY_5">PAY_5:</label>
+        <input type="number" id="PAY_5" name="PAY_5" min="-2" max="8" required>
+
+        <label for="PAY_6">PAY_6:</label>
+        <input type="number" id="PAY_6" name="PAY_6" min="-2" max="8" required>
+
+        <label for="BILL_AMT1">BILL_AMT1:</label>
+        <input type="number" id="BILL_AMT1" name="BILL_AMT1" step="0.01" required>
+
+        <label for="BILL_AMT2">BILL_AMT2:</label>
+        <input type="number" id="BILL_AMT2" name="BILL_AMT2" step="0.01" required>
+
+        <label for="BILL_AMT3">BILL_AMT3:</label>
+        <input type="number" id="BILL_AMT3" name="BILL_AMT3" step="0.01" required>
+
+        <label for="BILL_AMT4">BILL_AMT4:</label>
+        <input type="number" id="BILL_AMT4" name="BILL_AMT4" step="0.01" required>
+
+        <label for="BILL_AMT5">BILL_AMT5:</label>
+        <input type="number" id="BILL_AMT5" name="BILL_AMT5" step="0.01" required>
+
+        <label for="BILL_AMT6">BILL_AMT6:</label>
+        <input type="number" id="BILL_AMT6" name="BILL_AMT6" step="0.01" required>
+
+        <label for="PAY_AMT1">PAY_AMT1:</label>
+        <input type="number" id="PAY_AMT1" name="PAY_AMT1" step="0.01" required>
+
+        <label for="PAY_AMT2">PAY_AMT2:</label>
+        <input type="number" id="PAY_AMT2" name="PAY_AMT2" step="0.01" required>
+
+        <label for="PAY_AMT3">PAY_AMT3:</label>
+        <input type="number" id="PAY_AMT3" name="PAY_AMT3" step="0.01" required>
+
+        <label for="PAY_AMT4">PAY_AMT4:</label>
+        <input type="number" id="PAY_AMT4" name="PAY_AMT4" step="0.01" required>
+
+        <label for="PAY_AMT5">PAY_AMT5:</label>
+        <input type="number" id="PAY_AMT5" name="PAY_AMT5" step="0.01" required>
+
+        <label for="PAY_AMT6">PAY_AMT6:</label>
+        <input type="number" id="PAY_AMT6" name="PAY_AMT6" step="0.01" required>
+
+        <input type="submit" class="submit-btn" value="Predict">
+    </form>
+    
+    {% if prediction %}
+        <div class="result">
+            {{ prediction }}
+        </div>
+    {% endif %}
+</div>
+
+</body>
+</html>

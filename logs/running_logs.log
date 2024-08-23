@@ -1842,3 +1842,171 @@ x==========x]
 [2024-08-23 06:43:46,523: INFO: common: created directory at: artifacts/model_evaluation]
 [2024-08-23 06:43:46,780: INFO: common: json file saved at: artifacts\model_evaluation\metrics.json]
 [2024-08-23 06:43:46,782: INFO: stage_model_evaluation: >>>>>>>>>>>Model Evaluation stage completed successfully<<<<<<<<<]
+[2024-08-23 12:16:23,769: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.140.14.83:8080]
+[2024-08-23 12:16:23,772: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-08-23 12:16:31,336: INFO: _internal: 127.0.0.1 - - [23/Aug/2024 12:16:31] "GET / HTTP/1.1" 200 -]
+[2024-08-23 12:16:31,409: INFO: _internal: 127.0.0.1 - - [23/Aug/2024 12:16:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2024-08-23 12:17:56,787: ERROR: app: Exception on / [POST]]
+Traceback (most recent call last):
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\app.py", line 63, in index
+    return render_template('results.html', prediction=response)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\jinja2\environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\jinja2\environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\jinja2\environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: results.html
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\app.py", line 66, in index
+    return render_template('error.html', error_message=str(e))
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\jinja2\environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\jinja2\environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\jinja2\environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error.html
+[2024-08-23 12:17:56,803: INFO: _internal: 127.0.0.1 - - [23/Aug/2024 12:17:56] "[35m[1mPOST / HTTP/1.1[0m" 500 -]
+[2024-08-23 12:19:57,904: ERROR: app: Exception on / [POST]]
+Traceback (most recent call last):
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\app.py", line 63, in index
+    return render_template('index.html', prediction=response)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\jinja2\environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\jinja2\environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\jinja2\environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: results.html
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\app.py", line 66, in index
+    raise e
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\jinja2\environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\jinja2\environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\jinja2\environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error.html
+[2024-08-23 12:19:57,918: INFO: _internal: 127.0.0.1 - - [23/Aug/2024 12:19:57] "[35m[1mPOST / HTTP/1.1[0m" 500 -]
+[2024-08-23 12:20:02,659: ERROR: app: Exception on / [POST]]
+Traceback (most recent call last):
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\app.py", line 63, in index
+    return render_template('index.html', prediction=response)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\jinja2\environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\jinja2\environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\jinja2\environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: results.html
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\app.py", line 66, in index
+    raise e
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\jinja2\environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\jinja2\environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\jinja2\environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\sredekar\OneDrive - Interpublic\Desktop\Datascience\assignment\ETE_ML_Project\pwvenv\lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error.html
+[2024-08-23 12:20:02,676: INFO: _internal: 127.0.0.1 - - [23/Aug/2024 12:20:02] "[35m[1mPOST / HTTP/1.1[0m" 500 -]
+[2024-08-23 12:20:23,448: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.140.14.83:8080]
+[2024-08-23 12:20:23,450: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-08-23 12:20:29,836: INFO: _internal: 127.0.0.1 - - [23/Aug/2024 12:20:29] "GET / HTTP/1.1" 200 -]
+[2024-08-23 12:21:15,236: INFO: _internal: 127.0.0.1 - - [23/Aug/2024 12:21:15] "POST / HTTP/1.1" 200 -]
+[2024-08-23 12:25:10,844: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.140.14.83:8080]
+[2024-08-23 12:25:10,846: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-08-23 12:25:19,158: INFO: _internal: 127.0.0.1 - - [23/Aug/2024 12:25:19] "GET / HTTP/1.1" 200 -]
+[2024-08-23 12:26:06,796: INFO: _internal: 127.0.0.1 - - [23/Aug/2024 12:26:06] "POST / HTTP/1.1" 200 -]
