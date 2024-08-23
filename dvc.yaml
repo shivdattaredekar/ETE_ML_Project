@@ -49,7 +49,7 @@ stages:
       - config/config.yaml
       - schema.yaml
       - artifacts/model_training/model.joblib
-      - artifacts/model_training/scaler.joblib
+      - artifacts/model_training/scaler.joblib  
     
     outs:
       - artifacts/model_evaluation
