@@ -1,0 +1,56 @@
+stages:
+  data_ingestion:
+    cmd: python src/Mlproject/pipeline/stage_data_ingestion.py
+    deps:
+      - src/Mlproject/pipeline/stage_data_ingestion.py
+      - config/config.yaml
+    outs:
+      - artifacts/data_ingestion/UCI_Credit_Card.csv
+
+  data_validation:
+    cmd: python src/Mlproject/pipeline/stage_data_validation.py
+    deps:
+      - src/Mlproject/pipeline/stage_data_transformation.py
+      - config/config.yaml
+      - schema.yaml
+    outs:
+      - artifacts/data_validation
+
+
+  data_transformation:
+    cmd: python src/Mlproject/pipeline/stage_data_transformation.py
+    deps:
+      - src/Mlproject/pipeline/stage_data_transformation.py
+      - config/config.yaml
+    outs:
+      - artifacts/data_transformation
+
+
+  model_trainer:
+    cmd: python src/Mlproject/pipeline/stage_model_trainer.py
+    deps:
+      - src/Mlproject/pipeline/stage_model_trainer.py
+      - config/config.yaml
+      - schema.yaml
+      - params.yaml
+      - artifacts/data_ingestion/UCI_Credit_Card.csv
+    params:
+      - LogisticRegression.alpha
+      - LogisticRegression.l1_ratio
+      
+    outs:
+      - artifacts/model_training
+
+
+  model_evaluation:
+    cmd: python src/Mlproject/pipeline/stage_model_evaluation.py
+    deps:
+      - src/Mlproject/pipeline/stage_model_evaluation.py
+      - config/config.yaml
+      - schema.yaml
+      - artifacts/model_training/model.joblib
+      - artifacts/model_training/scaler.joblib
+    
+    outs:
+      - artifacts/model_evaluation
+      

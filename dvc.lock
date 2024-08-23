@@ -1,0 +1,118 @@
+schema: '2.0'
+stages:
+  data_ingestion:
+    cmd: python src/Mlproject/pipeline/stage_data_ingestion.py
+    deps:
+    - path: config/config.yaml
+      hash: md5
+      md5: 2986415c451c02dce51bb63f85ccd0fb
+      size: 1108
+    - path: src/Mlproject/pipeline/stage_data_ingestion.py
+      hash: md5
+      md5: d1288263180708a832fa66662da45f6c
+      size: 917
+    outs:
+    - path: artifacts/data_ingestion/UCI_Credit_Card.csv
+      hash: md5
+      md5: 940b416bb13a9b24bb5c9e1589284005
+      size: 2862995
+  data_validation:
+    cmd: python src/Mlproject/pipeline/stage_data_validation.py
+    deps:
+    - path: config/config.yaml
+      hash: md5
+      md5: 2986415c451c02dce51bb63f85ccd0fb
+      size: 1108
+    - path: schema.yaml
+      hash: md5
+      md5: 26c8bb796d45d1906b9f2a93b2948d70
+      size: 563
+    - path: src/Mlproject/pipeline/stage_data_transformation.py
+      hash: md5
+      md5: 32dc49efa48bb8119410d6ca38a98f2c
+      size: 1760
+    outs:
+    - path: artifacts/data_validation
+      hash: md5
+      md5: 6aa383b2c25551e32f4804af64fe84f2.dir
+      size: 73
+      nfiles: 1
+  data_transformation:
+    cmd: python src/Mlproject/pipeline/stage_data_transformation.py
+    deps:
+    - path: config/config.yaml
+      hash: md5
+      md5: 2986415c451c02dce51bb63f85ccd0fb
+      size: 1108
+    - path: src/Mlproject/pipeline/stage_data_transformation.py
+      hash: md5
+      md5: 32dc49efa48bb8119410d6ca38a98f2c
+      size: 1760
+    outs:
+    - path: artifacts/data_transformation
+      hash: md5
+      md5: 93c582b8af0ad37ab810ad35c3bf0448.dir
+      size: 3508527
+      nfiles: 2
+  model_trainer:
+    cmd: python src/Mlproject/pipeline/stage_model_trainer.py
+    deps:
+    - path: artifacts/data_ingestion/UCI_Credit_Card.csv
+      hash: md5
+      md5: 940b416bb13a9b24bb5c9e1589284005
+      size: 2862995
+    - path: config/config.yaml
+      hash: md5
+      md5: 2986415c451c02dce51bb63f85ccd0fb
+      size: 1108
+    - path: params.yaml
+      hash: md5
+      md5: 1f953d038730c2c03bdadb5edb5ca3ee
+      size: 51
+    - path: schema.yaml
+      hash: md5
+      md5: 26c8bb796d45d1906b9f2a93b2948d70
+      size: 563
+    - path: src/Mlproject/pipeline/stage_model_trainer.py
+      hash: md5
+      md5: 37ff1d3f04f3075e8cd04d843995fe24
+      size: 853
+    params:
+      params.yaml:
+        LogisticRegression.alpha: 0.01
+        LogisticRegression.l1_ratio: 0.1
+    outs:
+    - path: artifacts/model_training
+      hash: md5
+      md5: 10cb9b176e04f540ca389f8af98b4cc3.dir
+      size: 2846
+      nfiles: 2
+  model_evaluation:
+    cmd: python src/Mlproject/pipeline/stage_model_evaluation.py
+    deps:
+    - path: artifacts/model_training/model.joblib
+      hash: md5
+      md5: cb26476b153984f6747296258bdf579a
+      size: 1071
+    - path: artifacts/model_training/scaler.joblib
+      hash: md5
+      md5: 0867b41b9fc6d30a1809e26b76147084
+      size: 1775
+    - path: config/config.yaml
+      hash: md5
+      md5: 2986415c451c02dce51bb63f85ccd0fb
+      size: 1108
+    - path: schema.yaml
+      hash: md5
+      md5: 26c8bb796d45d1906b9f2a93b2948d70
+      size: 563
+    - path: src/Mlproject/pipeline/stage_model_evaluation.py
+      hash: md5
+      md5: 1f69a34aa0ff81f4915807b13cdc5b28
+      size: 875
+    outs:
+    - path: artifacts/model_evaluation
+      hash: md5
+      md5: 6ffe619371a3606522c1b1809b42a6c5.dir
+      size: 245
+      nfiles: 1
